@@ -180,7 +180,7 @@ function executeMarketingCookiesLogic()
 	window.dataLayer = window.dataLayer || [];
 	function gtag(){dataLayer.push(arguments);}
 	gtag('js', new Date());
-	gtag('config', 'UA-186719284-1');
+	gtag('config', 'UA-186719284-2');
 
 }
 
