@@ -320,7 +320,7 @@ def setup(app):
     app.add_js_file('js/custom.js')
     app.add_js_file('js/cookies_script.js')
 
-html_js_files = [('https://www.googletagmanager.com/gtag/js?id=UA-186719284-1', {'async': 'async'}),
+html_js_files = [('https://www.googletagmanager.com/gtag/js?id=UA-186719284-2', {'async': 'async'}),
                 ('https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js', {'crossorigin': 'anonymous'}),
                 ('https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js', {'crossorigin': 'anonymous'})]
 
