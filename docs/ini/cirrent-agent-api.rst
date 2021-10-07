@@ -3,40 +3,35 @@ CIRRENT™ Agent API
 
 CIRRENT™ INI gives you the ability to develop custom uses cases that rely on the CIRRENT™ Agent. You do so by using the CIRRENT™ Agent API. There are three key areas in which CIRRENT™ Agent API can help you build a custom monitoring and control use case.
 
-**********************
-Custom data submission
-**********************
+.. topic:: Custom data submission
 
-You can use the CIRRENT™ Agent to collect custom data from your device, and transmit it to the CIRRENT™ Cloud - in addition to the data that is automatically collected by the CIRRENT™ Agent. You can then use the CIRRENT™ Console to analyze the custom attributes you submitted.
+	You can use the CIRRENT™ Agent to collect custom data from your device, and transmit it to the CIRRENT™ Cloud - in addition to the data that is automatically collected by the CIRRENT™ Agent. You can then use the CIRRENT™ Console to analyze the custom attributes you submitted.
 
-That gives you the ability to monitor custom events, measurements and attributes that is unique to your IoT deployment. Custom measurements are submitted by making use of the CIRRENT™ Agent API. Any application on your device can connect to the CIRRENT™ Agent on your device, submitting custom parameters via the CIRRENT™ Agent API. 
+	That gives you the ability to monitor custom events, measurements and attributes that is unique to your IoT deployment. Custom measurements are submitted by making use of the CIRRENT™ Agent API. Any application on your device can connect to the CIRRENT™ Agent on your device, submitting custom parameters via the CIRRENT™ Agent API. 
 
-***************************
-Running jobs on your device
-***************************
+.. topic:: Running jobs on your device
 
-You can use the CIRRENT™ Agent API to run specific jobs on a single device, or across a fleet of devices, including the ability to collect entire device logs with a single action.
+	You can use the CIRRENT™ Agent API to run specific jobs on a single device, or across a fleet of devices, including the ability to collect entire device logs with a single action.
 
-******************************************
-Pushing status notifications to your apps
-******************************************
+.. topic:: Pushing status notifications to your apps
 
-The CIRRENT™ Agent also has the ability to send notifications directly to other apps on your device. For example, notifying another application that the device has lost Wi-Fi connectivity.
+	The CIRRENT™ Agent also has the ability to send notifications directly to other apps on your device. For example, notifying another application that the device has lost Wi-Fi connectivity.
  
+************************************
 Using the API to submit custom data
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+************************************
 
 You can submit a range of custom data through the CIRRENT™ Agent API. This includes custom events such as user-initiated reboot, custom measurements such as CPI temperatures, as well as any other attributed eg: firmware version. Depending on your choice of argument type you can submit either a string of up to 100 bytes, a floating-point value or a start stop event. The CIRRENT™ Agent API accepts four types of arguments:
 
-* Event which indicates a start or stop value
+* | Event which indicates a start or stop value
 
-* Measurement is a numerical value, sent as a floating point value, used to collected values such as CPU temperature or available storage
+* | Measurement is a numerical value, sent as a floating point value, used to collected values such as CPU temperature or available storage
 
-* Attribute is a string of up to 100 characters which contains any text you would like to record in CIRRENT™ Cloud that matches attribute data type 
+* | Attribute is a string of up to 100 characters which contains any text you would like to record in CIRRENT™ Cloud that matches attribute data type 
 
-* State is a string of up to 100 characters which contains any text you would like to record in CIRRENT™ Cloud that matches status data type
-	
-	Accepted values for each argument:
+* | State is a string of up to 100 characters which contains any text you would like to record in CIRRENT™ Cloud that matches status data type
+  | 	
+  |	Accepted values for each argument:
 
 	+-------------+-----------------+
 	| type        | Accepted value  |
@@ -77,9 +72,8 @@ However, If you pass a string as a custom measurement, the average, max, and min
 .. note:: Only continuous measurements are supported. At least one measurement should be sent every minute, each custom measurement command should be executed at most 1 minutes apart and the measurement value should be an integer or a floating point.
 
 
-**********************************************
 Sending INI custom data using the cirrent_cli:
-**********************************************
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Using the CIRRENT™ Agent API to submit custom data to the CIRRENT™ Cloud is simple. Just execute the following shell command to submit custom data:
 
@@ -122,9 +116,8 @@ These are all the possible values that CIRRENT™ Agent may return in response t
 +--------------+---------------+-----------------------------------------------------------------+
 
 
-*********************************************
 Example shell command for CIRRENT™ Agent API:
-*********************************************
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To access the CIRRENT™ Agent API, run the following command:
 
@@ -187,8 +180,9 @@ Finally, the following example adds an event count of log_upload_duration equal 
 	$ ./cirrent_cli ini_custom event log_upload_duration start
  	$ ./cirrent_cli ini_custom event log_upload_duration stop
 
+**************************
 Using the API to run jobs
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+**************************
 
 You can use the CIRRENT™ Agent API to execute jobs on a single device – or across a fleet of devices. The CIRRENT™ Agent checks for jobs once a day. If there is a pending job the CIRRENT™ Agent will check what the job is and execute a special script on the device.
 
@@ -217,9 +211,9 @@ For a verity of reasons applications on your device may benefit from knowing wha
 For example, you can use the CIRRENT™ Agent to alert an application on your device that the device has completed Wi-Fi onboarding.
 Similarly, should your device lose Wi-Fi connectivity you can trigger an action in an application on your device – by pausing a streaming server, for example.
 
-
+*************
 API commands
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+*************
 
 We’ve outlined some of the use cases for the CIRRENT™ Agent API above. To give you more insight into the custom use cases of the CIRRENT™ Agent, we also provide a list of the commands that you can run on the CIRRENT™ Agent. 
 

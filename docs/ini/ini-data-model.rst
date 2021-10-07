@@ -112,7 +112,7 @@ The measurement data type is a special data type in the CIRRENT™ Cloud. Based 
 
 * **A maximum value and a minimum value** specifying the highest measurement submitted and the lowest measurement submitted 
 
-* **A standard deviation**
+* **a standard deviation** that specifies the standard deviation of the measurements taken
 
 
 .. note:: The CIRRENT™ Agent API allows you to add your own custom measurements to report numerical data relevant to your application or system. For example, you could report memory usage or CPU temperature data. Read more about using the CIRRENT™ Agent API here.

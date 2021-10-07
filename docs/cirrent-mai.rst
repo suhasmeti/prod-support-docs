@@ -60,8 +60,6 @@ CIRRENT™ Mobile App Intelligence (MAI)
 
 	**Reporting, Analytics and Data Modeling with MAI**
 
-	* `Using MAI Dashboards <mai/using-the-mai-dashboards.rst>`_
-
 
 .. toctree::
    :maxdepth: 2

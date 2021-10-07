@@ -5,7 +5,7 @@ Cirrent Cloud Software Services
     :align: center
     :alt: Dashboard 2
 
-Infineon's Cirrent Cloud Software Services provide
+Infineon's CIRRENT™ Cloud Software Services provide
 cloud-enabled software and services that are intimately tied to Infineon
 semiconductor products.
 
@@ -15,7 +15,7 @@ Infineon customers via the cloud.
 
 Today Infineon's cloud software services consist of the following offerings:
 
-* Cirrent Product Analytics.
+* CIRRENT™ Product Analytics.
 
   * CIRRENT™ IoT Network Intelligence (INI) is a cloud software solution that helps data-driven product development to improve user experience, improve product reviews, decrease returns, and increase sales. CIRRENT™ INI uses the CIRRENT™ Agent embedded software in your IoT product to securely report data into the CIRRENT™ Cloud and provide real-time access for your product management and engineering teams via the CIRRENT™ Console. With CIRRENT™ INI, your product and engineering teams can solve customer and product problems faster
 

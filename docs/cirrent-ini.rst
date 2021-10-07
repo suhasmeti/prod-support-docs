@@ -40,41 +40,6 @@ CIRRENT™ IoT Network Intelligence (INI) delivers IoT device analytics for IoT 
 	* **CIRRENT™ Console** provides real-time visibility into the data from your devices, including out-of-the-box dashboards that analyzes a standard set of events and attributes. Simply log in to the CIRRENT™ Console to see the data and access the reports that helps you to understand the performance of your devices.
 
 
-.. topic:: Learn more
-
-	This GitHub set of documents will provides extensive information on CIRRENT™ INI:
-
-	* Getting started with INI
-
-		* INI Requirements
-		* Steps to configuring INI
-
-	* INI Data Model
-
-		* Events
-		* Measurements
-		* Attributes
-		* States
-
-	* CIRRENT™ Agent
-
-		* Installing CIRRENT™ Agent on Linux
-		* Installation example: Raspberry Pi
-		* CIRRENT™ Agent API
-		
-			* Using the API to submit custom data
-			* Using the API to run jobs
-			* Using the API for notifications
-			* API Commands
-
-	* CIRRENT™ Console for INI
-
-		* Dashboard
-		* Device Fleet
-		* Device Inspector
-		* Device Management
-		* Exporting data from the CIRRENT™ Cloud
-
 .. toctree::
    :maxdepth: 1
    :hidden:

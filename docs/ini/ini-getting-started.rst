@@ -9,34 +9,32 @@ Steps to configuring INI
 
 Interested in testing INI on your device? You need to complete a few steps to configure INI and to start receiving device analytics:
 
-* Register for an account on CIRRENT™ Cloud. 
+* | **Register for an account on CIRRENT™ Cloud** 
+  | Registration is free and you can do so via this link. Registering automatically creates a user profile on CIRRENT™ Cloud, and gives you full access to CIRRENT™ Console.
+  |
 
-  Registration is free and you can do so via this link. Registering automatically creates a user profile on CIRRENT™ Cloud, and gives you full access to CIRRENT™ Console.
-
-
-* Install the CIRRENT™ Agent on your device
-
-  The instructions to install the CIRRENT™ Agent depends on the operating system on your device:
-
-	* View the general steps for installing the CIRRENT™ Agent on a Linux device here.
-	* View specific steps to configure CIRRENT™ Agent on Raspberry Pi. 
-	* View specific steps for configuring CIRRENT™ Agent using ModusToolbox
+* | **Install the CIRRENT™ Agent on your device**
+  | The instructions to install the CIRRENT™ Agent depends on the operating system on your device:
+  |
+  |	* View the general steps for installing the `CIRRENT™ Agent on a Linux device <cirrent-agent.rst#installing-cirrent-agent-on-linux>`_
+  |	* View specific steps to configure `CIRRENT™ Agent on Raspberry Pi <cirrent-agent.rst#installation-example-cirrent-agent-on-raspberry-pi>`_ 
+  |	* View specific steps for configuring `CIRRENT™ Agent using ModusToolbox <cirrent-agent.rst#using-the-cirrent-agent-in-modustoolbox>`_
 
 	Please contact us on support@cirrent.com if your device runs RTOS. 
 
-	Note: CIRRENT™ Agent is already pre-installed on a select range of INFINEON products, including INFINEON AIROC™ Wi-Fi.
+
+* | **Onboard your device with CIRRENT™ Cloud**
+  | The CIRRENT™ Cloud facilitates device authentication for your single device or fleet of devices. Every device that sends INI data to the CIRRENT™ Cloud must first complete an onboarding process. See the next section for more details about onboarding.
+  |
 
 
-* Onboard your device with CIRRENT™ Cloud
+* | **Reviewing your analytics on CIRRENT™ Console**
+  | Once data starts steaming in from CIRRENT™ Agent you will be able to review a range of analytics across all your devices, and drill down into device specific analytics. You can read more about the CIRRENT™ Console here.
 
-  The CIRRENT™ Cloud facilitates device authentication for your single device or fleet of devices. Every device that sends INI data to the CIRRENT™ Cloud must first complete an onboarding process. See the next section for more details about onboarding.
+.. note:: Before you get started with INI you must have an active CIRRENT™ Cloud account so that you register your device and access CIRRENT™ Console where you will view your device data. You also need a device that is compatible with the CIRRENT™ Agent – you can view the requirements here. 
 
+.. note:: CIRRENT™ Agent is already pre-installed on a select range of INFINEON products, including INFINEON AIROC™ Wi-Fi.
 
-* Reviewing your analytics on CIRRENT™ Console
-
-  Once data starts steaming in from CIRRENT™ Agent you will be able to review a range of analytics across all your devices, and drill down into device specific analytics. You can read more about the CIRRENT™ Console here.
-
-.. note:: Before you get started with INI you must have an active CIRRENT™ Cloud account so that you register your device and access CIRRENT™ Console where you will view your device data. You also need a device that is compatible with the CIRRENT™ Agent – you can view the requirements here.
  
 *******************************************
 Onboarding devices into the CIRRENT™ Cloud
@@ -74,15 +72,3 @@ For the **iOS** edition of the app, scan the following code:
  
 If using the iOS you can make use of the in-app walkthrough to smooth the onboarding process.
 
-*******************************************
-Using the OPS API to register devices
-*******************************************
-
-The OPS API is used for bulk provisioning of devices during your manufacturing process. The API is described in detail `here <https://app.swaggerhub.com/apis/Cirrent/api-ops/1.0.0-oas3>`_. You can use Authorize button on the top right corner of the SwaggerHub page and then click "Try it out" for each API call to check the payload and responses.
-
-You can use any one of the two options below for BasicAuth with this API:
-
-1.	Use Username and Password associated with CIRRENT™ account
-2.	Use OPS API Key and Secret generated from CIRRENT™ console
-
-To generate OPS API Key and Secret, please go to the `API Key Management page <https://go.cirrent.com/management/api-key>`_ in the CIRRENT™ Console. Select Key Type as "OPS", enter a name for the key and click "Add". The CIRRENT™ Console will generate OPS API Key and Secret.
