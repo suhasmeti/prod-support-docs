@@ -58,13 +58,15 @@ The CIRRENT™ Agent consists out of three components that work together to conn
 * | cirrent_agent
   |
   | An executable binary that runs as a daemon (CIRRENT_agent)
+  |
 
 * | libcirrent_api.so
   |
   | Shared library for communicating and controlling the CIRRENT™ Agent.
   | Communication and control of the CIRRENT™ Agent is done either by linking in the libcirrent using the cirrent.h header or using the cirrent_cli shell utility (which internally uses the libcirrent)
-
-* |cirrent_cli
+  |
+  
+* | cirrent_cli
   |
   | Shell utility for communicating and controlling the CIRRENT™ Agent using the libCIRRENT_api.so library.
   | Refer to the section on the CIRRENT™ Agent API for a list of the commands that you can run.

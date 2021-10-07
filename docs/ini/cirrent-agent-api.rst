@@ -188,17 +188,20 @@ You can use the CIRRENT™ Agent API to execute jobs on a single device – or a
 
 Some of the tasks you can request the CIRRENT™ Agent to perform include:
 
-* Device logs. You can request that the CIRRENT™ Agent collects extensive logs from your device, above and beyond the data collected by default through the CIRRENT™ Agent. 
+* **Device logs.** You can request that the CIRRENT™ Agent collects extensive logs from your device, above and beyond the data collected by default through the CIRRENT™ Agent. 
 
-CIRRENT™ Agent saves the logs to the CIRRENT™ Cloud. You can use the logs to troubleshoot complex device issues by reviewing OS logs in depth – to diagnose problems such as driver failure. 
+  CIRRENT™ Agent saves the logs to the CIRRENT™ Cloud. You can use the logs to troubleshoot complex device issues by reviewing OS logs in depth – to diagnose problems such as driver failure. 
 
-* CIRRENT™ Network profile. Likewise, you can request that the CIRRENT™ Agent collects and saves the full CIRRENT™ network profile to the CIRRENT™ cloud.
 
-With the CIRRENT™ network profile you can diagnose complex network issues by viewing low-level network data including routing table, nameserver configuration and firewall settings. This profile could help you diagnose a range of glitches – for example, where a port was accidentally blocked on the network.
+* **CIRRENT™ Network profile.** Likewise, you can request that the CIRRENT™ Agent collects and saves the full CIRRENT™ network profile to the CIRRENT™ cloud.
 
-* Rolling INI data. CIRRENT™ INI collects values every minute and submit the values to the CIRRENT™ Cloud. However, a rolling log of values is not stored on CIRRENT™ Cloud. Nonetheless, the CIRRENT™ Agent does store a 24 hour rolling log on the device.
+  With the CIRRENT™ network profile you can diagnose complex network issues by viewing low-level network data including routing table, nameserver configuration and firewall settings. This profile could help you diagnose a range of glitches – for example, where a port was accidentally blocked on the network.
 
-You can use the CIRRENT™ Agent API to collect these raw values which can deliver unique insights. For example, when you know that a specific event occurred, you can use the raw rolling log to tell exactly when that event happened.
+
+* **Rolling INI data.** CIRRENT™ INI collects values every minute and submit the values to the CIRRENT™ Cloud. However, a rolling log of values is not stored on CIRRENT™ Cloud. Nonetheless, the CIRRENT™ Agent does store a 24 hour rolling log on the device.
+
+  You can use the CIRRENT™ Agent API to collect these raw values which can deliver unique insights. For example, when you know that a specific event occurred, you can use the raw rolling log to tell exactly when that event happened.
+  
 
 It is also possible to use the CIRRENT™ Agent to remotely run custom jobs of your own design. Contact support@cirrent.com for more information.
 Running a job on your device is simple. Just navigate to the Device Inspector on the CIRRENT™ Console, and Explore your device. The list of pending jobs and the option to trigger new jobs is listed under the Jobs tab.

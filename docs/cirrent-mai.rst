@@ -67,5 +67,4 @@ CIRRENT™ Mobile App Intelligence (MAI)
 
    /mai/what-is-mai
    /mai/getting-started-with-mai
-   /mai/using-the-mai-dashboards
    /mai/mai-console

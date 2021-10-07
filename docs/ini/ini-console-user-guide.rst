@@ -189,9 +189,9 @@ and choose what metric you’d like to view. Choose environment - from ISP, rout
   
 Once you apply the settings that you have chosen, the benchmark chart will populate. It will default to ranking from worst to best, but you can click on any of the columns and it will rank based on the column. For example, if you want to rank by number of devices in that environment, click “Device Count.”
 
-
+*****************
 Device Inspector
-^^^^^^^^^^^^^^^^^^^
+*****************
 
 The Device Inspector dashboards give you the view of a single device thanks to a device-level view. Your team can review the rich data on an individual device level to diagnose any particular issues with a device – or to achieve a deeper understanding of device behavior in the field. 
 

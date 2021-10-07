@@ -1,4 +1,4 @@
-Cirrent Cloud Software Services
+CIRRENT™ Cloud Software Services
 ===============================
 
 .. image:: img/cirrentproduct_v2.png
