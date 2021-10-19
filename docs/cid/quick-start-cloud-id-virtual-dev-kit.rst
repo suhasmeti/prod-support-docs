@@ -50,7 +50,7 @@ C.  Now, log in at https://cirrent.infineon.com/login using the credentials you 
 
 D.  By default, you’ll have access to the Test account. Click **Next**.
 
-E.  Try to find the Cloud ID section in the CIRRENT™ Console – navigate to **Device Management** and **Cloud ID**. You can also directly access the page with this URL: https://cirrent.infineon.com/cloud-id/infineon-devices.
+E.  Try to find the Cloud ID section in the CIRRENT™ Console – navigate to **Device Management** and **Cloud ID**. You can also directly access the page with this URL: https://cirrent.infineon.com/cloud-devices/infineon-devices.
 
 2. Try to bind a batch of devices using a QR Code
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -72,9 +72,10 @@ D.  Next, you will see a screen requesting a **Product Batch ID** and **Product 
 
 E.  The system will provide you with an indication of success. 
 
+The above steps show you how simple it is to associate a batch of devices with your CIRRENT™ Cloud ID account.
+
 .. note:: If you try and bind a reel for the second time, you will get an error condition saying that you've already binded it.
 
-    The above steps show you how simple it is to associate a batch of devices with your CIRRENT™ Cloud ID account.
 
 
 3. Verify that devices are now binded in CIRRENT™ Cloud ID
@@ -84,7 +85,7 @@ Now that you’ve binded a batch of devices in the CIRRENT™ Cloud you can view
 
 **> Complete these steps using a PC and browser**
 
-A.  Navigate to **Device Management** and **Cloud ID**. You can also directly access the page with this URL: https://cirrent.infineon.com/cloud-id/infineon-devices.
+A.  Navigate to **Device Management** and **Cloud ID**. You can also directly access the page with this URL: https://cirrent.infineon.com/cloud-devices/infineon-devices
 
 B.  Verify that the devices you binded through a QR code are listed under the **Infineon Devices** section. You’ll notice a device count under **# of Registered Devices**.
 
@@ -104,11 +105,11 @@ In most scenarios, you will want to provision claimed devices directly into your
 
 **> Complete these steps using a PC and browser**
 
-A.  Navigate to **Device Management, Cloud ID**, and select the **Product Cloud APIs** tab. You can also follow this link: https://console.stg.cirrentsystems.com/cloud-id/cloud-apis
+A.  Navigate to **Device Management, Cloud ID**, and select the **Product Cloud APIs** tab. You can also follow this link: https://cirrent.infineon.com/cloud-devices/cloud-apis
 
 B.  Next, click on **Add Cloud API**.
 
-C.  Complete your Cloud API details in the dialogue box, and click **Create**.
+C.  Complete your Cloud API details in the dialogue box, and click **Create**. For the purpose of this developer kit you can enter dummy details for testing purposes.
 
 D.  Confirm that the API link you’ve just added appears in the **Product Cloud APIs** screen.
 
@@ -133,7 +134,7 @@ To automatically provision devices with your Product Cloud as soon as you bind a
 
 **> Complete these steps using a PC and browser**
 
-A.  Navigate to **Device Management, Cloud ID**, and select the **Product Cloud APIs** tab. You can also follow this link: https://console.stg.cirrentsystems.com/cloud-id/cloud-apis
+A.  Navigate to **Device Management, Cloud ID**, and select the **Product Cloud APIs** tab. You can also follow this link: https://cirrent.infineon.com/cloud-devices/cloud-apis/
 
 B.  Slide the **Automatically Provision Devices to Product Cloud** slider to the **ON** position
 
@@ -157,7 +158,7 @@ By scanning this QR code you’ve now binded your devices with CIRRENT™ Cloud 
 
 **> Complete these steps using a PC and browser**
 
-A.  Navigate to **Device Management** and **Cloud ID**. You can also directly access the page with this URL: https://cirrent.infineon.com/cloud-id/infineon-devices
+A.  Navigate to **Device Management** and **Cloud ID**. You can also directly access the page with this URL: https://cirrent.infineon.com/cloud-devices/infineon-devices
 
 B.  Verify that on the **Infineon Devices** tab, your additional batch of devices is now listed.
 
