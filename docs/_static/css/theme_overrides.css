@@ -649,7 +649,7 @@ h1, h2, .rst-content .toctree-wrapper p.caption, h3, h4, h5, h6, legend
     padding: 0
 }
 
-ul {
+ul, ol {
 	padding-left: 40px !important;
 }
 
@@ -679,6 +679,10 @@ ul li ul li ul li {
 }
 ul li p {
 	margin-bottom: 0 !important;
+}
+
+.upperalpha li {
+	list-style: upper-alpha !important; 
 }
 
 

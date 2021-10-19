@@ -65,6 +65,5 @@ CIRRENT™ Mobile App Intelligence (MAI)
    :maxdepth: 2
    :hidden:
 
-   /mai/what-is-mai
    /mai/getting-started-with-mai
    /mai/mai-console
