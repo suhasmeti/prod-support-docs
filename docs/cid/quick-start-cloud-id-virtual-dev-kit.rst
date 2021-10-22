@@ -105,7 +105,7 @@ In most scenarios, you will want to provision claimed devices directly into your
 
 **> Complete these steps using a PC and browser**
 
-A.  Navigate to **Device Management, Cloud ID**, and select the **Product Cloud APIs** tab. You can also follow this link: https://cirrent.infineon.com/cloud-devices/cloud-apis
+A.  Navigate to **Device Management, Cloud ID**, and select the **Product Cloud APIs** tab. You can also follow this link: https://cirrent.infineon.com/cloud-devices/provisioning
 
 B.  Next, click on **Add Cloud API**.
 
@@ -134,7 +134,7 @@ To automatically provision devices with your Product Cloud as soon as you bind a
 
 **> Complete these steps using a PC and browser**
 
-A.  Navigate to **Device Management, Cloud ID**, and select the **Product Cloud APIs** tab. You can also follow this link: https://cirrent.infineon.com/cloud-devices/cloud-apis/
+A.  Navigate to **Device Management, Cloud ID**, and select the **Product Cloud APIs** tab. You can also follow this link: https://cirrent.infineon.com/cloud-devices/provisioning/
 
 B.  Slide the **Automatically Provision Devices to Product Cloud** slider to the **ON** position
 
@@ -172,14 +172,14 @@ Virtual Reels
 ========   ===========   ============================   ===================================================    ============================================
 Reel #     GUID          # of Certificates in Reel                                                             QR Code
 ========   ===========   ============================   ===================================================    ============================================
-1          D001          2                              https://cirrent.infineon.com/cloud-id?groupId=D001     .. image:: ../img/qr-1.png
-2          D002          2                              https://cirrent.infineon.com/cloud-id?groupId=D002     .. image:: ../img/qr-2.png
-3          D003          2                              https://cirrent.infineon.com/cloud-id?groupId=D003     .. image:: ../img/qr-3.png
-4          D004          2                              https://cirrent.infineon.com/cloud-id?groupId=D004     .. image:: ../img/qr-4.png
-5          D005          2                              https://cirrent.infineon.com/cloud-id?groupId=D005     .. image:: ../img/qr-5.png
-6          D006          5                              https://cirrent.infineon.com/cloud-id?groupId=D006     .. image:: ../img/qr-6.png
-7          D007          5                              https://cirrent.infineon.com/cloud-id?groupId=D007     .. image:: ../img/qr-7.png
-8          D008          5                              https://cirrent.infineon.com/cloud-id?groupId=D008     .. image:: ../img/qr-8.png
-9          D009          10                             https://cirrent.infineon.com/cloud-id?groupId=D009     .. image:: ../img/qr-9.png
-10         D010          10                             https://cirrent.infineon.com/cloud-id?groupId=D0010    .. image:: ../img/qr-10.png
+1          D001          2                              https://cirrent.infineon.com/cloud-id?groupId=D001     .. image:: ../img/QR_D001.png
+2          D002          2                              https://cirrent.infineon.com/cloud-id?groupId=D002     .. image:: ../img/QR_D002.png
+3          D003          2                              https://cirrent.infineon.com/cloud-id?groupId=D003     .. image:: ../img/QR_D003.png
+4          D004          2                              https://cirrent.infineon.com/cloud-id?groupId=D004     .. image:: ../img/QR_D004.png
+5          D005          2                              https://cirrent.infineon.com/cloud-id?groupId=D005     .. image:: ../img/QR_D005.png
+6          D006          5                              https://cirrent.infineon.com/cloud-id?groupId=D006     .. image:: ../img/QR_D006.png
+7          D007          5                              https://cirrent.infineon.com/cloud-id?groupId=D007     .. image:: ../img/QR_D007.png
+8          D008          5                              https://cirrent.infineon.com/cloud-id?groupId=D008     .. image:: ../img/QR_D008.png
+9          D009          10                             https://cirrent.infineon.com/cloud-id?groupId=D009     .. image:: ../img/QR_D009.png
+10         D010          10                             https://cirrent.infineon.com/cloud-id?groupId=D0010    .. image:: ../img/QR_D010.png
 ========   ===========   ============================   ===================================================    ============================================
