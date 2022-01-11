@@ -477,10 +477,10 @@ h1, h2, .rst-content .toctree-wrapper p.caption, h3, h4, h5, h6, legend
 }
 .new-nav .logo {
 	float: left;
-	width: 190px !important;
+	width: 155px !important;
 	position: absolute;
 	top: 0px;
-	left: 20px;
+	left: 35px;
 }
 .themetitle {
 	color:  #928285;
