@@ -477,9 +477,9 @@ h1, h2, .rst-content .toctree-wrapper p.caption, h3, h4, h5, h6, legend
 }
 .new-nav .logo {
     float: left;
-    width: 110px!important;
+    width: 105px !important;
     position: absolute;
-    top: 18%;
+    top: 20%;
     left: 5%;
 }
 .themetitle {
