@@ -476,11 +476,11 @@ h1, h2, .rst-content .toctree-wrapper p.caption, h3, h4, h5, h6, legend
 	border-bottom: 2px solid #e9e6e7;
 }
 .new-nav .logo {
-	float: left;
-	width: 155px !important;
-	position: absolute;
-	top: 0px;
-	left: 35px;
+    float: left;
+    width: 110px!important;
+    position: absolute;
+    top: 18%;
+    left: 5%;
 }
 .themetitle {
 	color:  #928285;
