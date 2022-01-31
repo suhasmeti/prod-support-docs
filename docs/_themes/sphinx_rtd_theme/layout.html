@@ -75,7 +75,7 @@
       {%- endfor %}
     {% endif %}
     <script type="text/javascript" src="{{ pathto('_static/js/theme.js', 1) }}"></script>
-	
+
 	<!-- Google Tag Manager -->
   <script type="text/javascript">
     // window.trackAllowedOthers = false;
@@ -98,10 +98,10 @@
     window.trackData = window.trackData || {};
   </script>
   <script>
-    const consentCookieName = 'cookie_consent';
+    const consentCookieName = 'cirrent_cookie_consent';
     const consentCookieVersion = 'release_2021-09';
     const consentCookieExpireDays = 2 * 365;
-   // const googleAnalyticsId = 'UA-186719284-1'; // Test
+    const googleAnalyticsId = 'GTM-N8N7WR8'; // production
     //const googleAnalyticsId = 'UA-186719284-2'; // production
     let cookieConsentCookieModalReady = false;
     let cookiesAlreadyConfirmed = false;
@@ -116,16 +116,21 @@
   </script>
 
   <!-- Google Tag Manager -->
-  <script>
-    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-N8N7WR8');
-  </script>
-  <!-- End Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-N8N7WR8');</script>
+<!-- End Google Tag Manager -->
 
-
+  <noscript>
+    <div
+      style="width: 22em; position: absolute; left: 50%; margin-left: -11em; color: red; background-color: white; border: 1px solid red; padding: 4px; font-family: sans-serif">
+      Your web browser must have JavaScript enabled in order for this
+      application to display correctly.</div>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N8N7WR8" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+ 
     {# OPENSEARCH #}
     {%- if use_opensearch %}
     <link rel="search" type="application/opensearchdescription+xml"
@@ -160,11 +165,6 @@
 
 <body class="wy-body-for-nav">
 
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N8N7WR8"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-
   <div class="new-nav">
     <div class="nav-left">
       {% if logo %}
@@ -173,8 +173,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           #}
           <a href="{{ pathto('index') }}">
             <img src="{{ pathto('_static/' + logo, 1) }}" class="logo" alt="{{ _('Logo') }}"/>
-	    <div class="themetitle">ModusToolbox™ Software</div>
           </a>
+          <div class="themetitle">CIRRENT Documentation</div>
         {% endif %}
         </a>
         
@@ -320,7 +320,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   {%- block footer %} {% endblock %}
   <noscript>
-    <strong>We're sorry but ModusToolbox™ Software doesn't work properly without JavaScript enabled. Please enable it to
+    <strong>We're sorry but Cirrent Documentation doesn't work properly without JavaScript enabled. Please enable it to
       continue.</strong>
   </noscript>
   <div id="app"></div>
@@ -442,9 +442,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="modal-backdrop hide"></div>
   </div>
   <!-- Cookie modal end -->
-  <script>
-    var navigationPageId = 'ad7131e4-be29-11e3-8b04-40f2e90e8d04';
-  </script>
-  
+
 </body>
 </html>
