@@ -313,11 +313,11 @@ def setup(app):
         'enable_auto_doc_ref': True,
     }, True)
     app.add_transform(AutoStructify)
-    app.add_css_file('css/theme_overrides.css')
-    app.add_css_file('css/cookieConsent.css')
-    app.add_css_file('css/bootstrapHelper.css')
-    app.add_js_file('js/searchtools.js')
-    app.add_js_file('js/custom.js')
-    app.add_js_file('js/changeModal.js')
-    app.add_js_file('js/privacyHelper.js')
+    app.add_css_file('css/theme_overrides.css?v=4')
+    app.add_css_file('css/cookieConsent.css?v=4')
+    app.add_css_file('css/bootstrapHelper.css?v=4')
+    app.add_js_file('js/searchtools.js?v=4')
+    app.add_js_file('js/custom.js?v=4')
+    app.add_js_file('js/changeModal.js?v=4')
+    app.add_js_file('js/privacyHelper.js?v=4')
 
