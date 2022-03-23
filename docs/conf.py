@@ -314,10 +314,6 @@ def setup(app):
     }, True)
     app.add_transform(AutoStructify)
     app.add_css_file('css/theme_overrides.css?v=4')
-    app.add_css_file('css/cookieConsent.css?v=4')
-    app.add_css_file('css/bootstrapHelper.css?v=4')
     app.add_js_file('js/searchtools.js?v=4')
     app.add_js_file('js/custom.js?v=4')
-    app.add_js_file('js/changeModal.js?v=4')
-    app.add_js_file('js/privacyHelper.js?v=4')
 
