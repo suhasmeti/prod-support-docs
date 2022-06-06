@@ -317,3 +317,5 @@ def setup(app):
     app.add_js_file('js/searchtools.js?v=4')
     app.add_js_file('js/custom.js?v=4')
 
+
+html_js_files = [('https://gundlapallys.github.io/openDocsServices/gtm_dynamic_load_script.js', {'crossorigin': 'anonymous'})]

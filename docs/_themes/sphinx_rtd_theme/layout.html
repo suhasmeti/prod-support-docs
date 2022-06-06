@@ -74,24 +74,7 @@
         <script type="text/javascript" src="{{ pathto(scriptfile, 1) }}"></script>
       {%- endfor %}
     {% endif %}
-    <script type="text/javascript" src="{{ pathto('_static/js/theme.js', 1) }}"></script>
-    
-	<!-- Prod OneTrust Cookies Consent Notice start for infineon.com -->
-    <script type="text/javascript" src="https://cdn.cookielaw.org/consent/85f8227d-e015-4c62-ab96-ee1a08760fb3/OtAutoBlock.js" ></script>
-    <script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" data-document-language="true" type="text/javascript" charset="UTF-8" data-domain-script="85f8227d-e015-4c62-ab96-ee1a08760fb3" ></script>
-    <script type="text/javascript">
-       function OptanonWrapper() { }
-    </script>
-    <!-- Prod OneTrust Cookies Consent Notice end for infineon.com -->
-	
-	<!-- Google Tag Manager -->
-	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-	})(window,document,'script','dataLayer','GTM-N8N7WR8');</script>
-	<!-- End Google Tag Manager -->
-	
+    <script type="text/javascript" src="{{ pathto('_static/js/theme.js', 1) }}"></script>	
 	
     {# OPENSEARCH #}
     {%- if use_opensearch %}
@@ -127,10 +110,6 @@
 
 <body class="wy-body-for-nav">
 
-	<!-- Google Tag Manager (noscript) -->
-	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N8N7WR8"
-	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-	<!-- End Google Tag Manager (noscript) -->
   <div class="new-nav">
     <div class="nav-left">
       {% if logo %}
