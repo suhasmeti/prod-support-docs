@@ -74,8 +74,24 @@
         <script type="text/javascript" src="{{ pathto(scriptfile, 1) }}"></script>
       {%- endfor %}
     {% endif %}
-    <script type="text/javascript" src="{{ pathto('_static/js/theme.js', 1) }}"></script>
-
+	<script type="text/javascript" src="{{ pathto('_static/js/theme.js', 1) }}"></script>
+	
+	<!-- QA OneTrust Cookies Consent Notice start for infineon.com -->
+	<!--<script type="text/javascript" src="https://cdn.cookielaw.org/consent/85f8227d-e015-4c62-ab96-ee1a08760fb3-test/OtAutoBlock.js" ></script>
+    <script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" data-document-language="true" type="text/javascript" charset="UTF-8" data-domain-script="85f8227d-e015-4c62-ab96-ee1a08760fb3-test" ></script>
+    <script type="text/javascript">
+       function OptanonWrapper() { }
+    </script> -->
+	<!-- QA OneTrust Cookies Consent Notice end for infineon.com -->
+	
+	<noscript>
+    <div
+      style="width: 22em; position: absolute; left: 50%; margin-left: -11em; color: red; background-color: white; border: 1px solid red; padding: 4px; font-family: sans-serif">
+      Your web browser must have JavaScript enabled in order for this
+      application to display correctly.</div>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=UA-186719284-1" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+	
     {# OPENSEARCH #}
     {%- if use_opensearch %}
     <link rel="search" type="application/opensearchdescription+xml"
@@ -138,6 +154,15 @@
     {# SIDE NAV, TOGGLES ON MOBILE #}
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
+	    <div class="left-nav-icons">
+		  <div style="float:left;width:50%;margin-top: 2.5%;">
+	        <a target="_blank" href="https://www.infineon.com/cms/en/design-support/software/documentation/"><image class="home-icon" src="{{ pathto('_static/image/house.svg', 1) }}"><b>&nbsp;Home</b></a>
+          </div>
+          <div style="float:right;width:50%" align="right">
+            <a target="_blank" href="https://community.infineon.com/t5/ModusToolbox-AnyCloud-SDK/bd-p/ModusToolboxAnyCloudSDK"><image class="community-icon" src="{{ pathto('_static/image/community.svg', 1) }}"><b>&nbsp;Community</b></a>
+          </div>			  
+		</div>
+		<hr>
         <div class="wy-side-nav-search" {% if theme_style_nav_header_background %} style="background: {{theme_style_nav_header_background}}" {% endif %}>
           {% block sidebartitle %}
 
@@ -264,6 +289,11 @@
   {% endif %}
 
   {%- block footer %} {% endblock %}
-
+  <noscript>
+    <strong>We're sorry but Cirrent Documentation doesn't work properly without JavaScript enabled. Please enable it to
+      continue.</strong>
+  </noscript>
+  <div id="app"></div>
+  <!-- built files will be auto injected -->
 </body>
 </html>

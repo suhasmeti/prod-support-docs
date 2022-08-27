@@ -20,7 +20,7 @@ CIRRENT™ IoT Network Intelligence (INI) delivers IoT device analytics for IoT 
 
 .. topic:: How INI works
 
-	CIRRENT™ INI works on its own, or in combination with CIRRENT™ MAI, to deliver insight into how your IoT devices perform and are being used in practice. INI uses the CIRRENT™ Agent, a lean application that’s embedded in your IoT product to securely report data into the CIRRENT™ Cloud, providing real-time access for your product management and engineering teams via the CIRRENT™ Console. 
+	CIRRENT™ INI works on its own, or in combination with CIRRENT™ MAI, to deliver insight into how your IoT devices perform and how devices are used in practice. INI uses the CIRRENT™ Agent, a lean application that’s embedded in your IoT product to securely report data into the CIRRENT™ Cloud, providing real-time access for your product management and engineering teams via the CIRRENT™ Console. 
 
 	.. image:: img/ini-img.png
 	    :align: center

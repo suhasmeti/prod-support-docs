@@ -18,7 +18,7 @@ Your device needs to meet several minimum requirements to host the CIRRENT™ Ag
 Hardware requirements
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-The CIRRENT™ Agent hardware requirements depend on the feature being used.
+The CIRRENT™ Agent hardware requirements depends on the features being used.
 
 * Wi-Fi Network interface must have STA mode
 * Your device must have persistent storage with read/write access
@@ -53,7 +53,7 @@ When you sign up as a CIRRENT™ INI customer we will automatically supply you w
 Components
 ^^^^^^^^^^^
 
-The CIRRENT™ Agent consists out of three components that work together to connect your device to the CIRRENT™ Cloud and to report observation from your device.
+The CIRRENT™ Agent consists out of three components that work together to connect your device to the CIRRENT™ Cloud and to report observations from your device.
 
 * | cirrent_agent
   |
@@ -117,7 +117,7 @@ On Linux, the CA relies on the following libraries that are linked directly into
 | libmicrohttpd         | DHCP Server                    | CM             | Enables Wi-Fi onboarding           |
 +-----------------------+--------------------------------+----------------+------------------------------------+
 
- ℹ️ If you have the following utilities available on your target Linux device you will find installation easier:
+ If you have the following utilities available on your target Linux device you will find installation easier:
 
 +--------------+--------------------+-------------------------------------------------+
 | Utility      | Description        | Notes                                           |
@@ -132,9 +132,9 @@ On Linux, the CA relies on the following libraries that are linked directly into
 Installation example: CIRRENT™ Agent on Raspberry Pi
 *****************************************************
 
-Integrating CIRRENT™ Agent on your Linux-based device is simple. In this example guide we show you how to use your Raspberry Pi as a testing platform to install, configure, run, and use the CIRRENT™ Agent (CA) on your Raspberry Pi to run the IoT Network Intelligence feature
+Integrating CIRRENT™ Agent on your Linux-based device is simple. In this example guide we show you how to use your Raspberry Pi as a testing platform to install, configure, run, and use the CIRRENT™ Agent (CA) on your Raspberry Pi to run CIRRENT™ INI.
 
-By the end of this guide you will have the latest CIRRENT™ Agent running on your Raspberry Pi and your Raspberry Pi device will be reporting data to the CIRRENT™ Cloud. You can view this data on your CIRRENT™ Console account.
+By the end of this guide you will have the latest CIRRENT™ Agent running on your Raspberry Pi and your Raspberry Pi device will be reporting data to the CIRRENT™ Cloud. You can view this data in the CIRRENT™ Console.
 
 Hardware requirements
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -152,7 +152,7 @@ You need a clean install of the Raspbian OS, we’ve test CIRRENT™ Agent on **
 
 **Note that you will need terminal access to your Raspberry Pi, you can** `read more about terminal access here <https://www.raspberrypi.org/documentation/computers/using_linux.html#terminal>`_.
 
-Finally, you also need a CIRRENT™ Cloud account in order to receive inbound data from the CIRRENT™ Agent. You can register for an account here, or by contacting support@cirrent.com
+Finally, you also need a CIRRENT™ Cloud account in order to receive inbound data from the CIRRENT™ Agent.
 
 Getting ready
 ^^^^^^^^^^^^^^
@@ -181,7 +181,7 @@ Installation
 
 		sudo dpkg -i CIRRENT™-agent_2.0.4-ini+deb10u3_armhf.deb
 
-	⚠️ some errors may be reported by dpkg. You can safely ignore these errors. See output:
+	Some errors may be reported by dpkg. You can safely ignore these errors. See output:
 
 
 	::
@@ -208,9 +208,7 @@ Installation
 
 		sudo nano /etc/default/CIRRENT™
 
-	Add the following lines and replace the 
-
-	placeholders PROVISIONING_KEY and PROVISIONING_SECRET with your provisioning key and secret
+	Add the following lines and replace the placeholders PROVISIONING_KEY and PROVISIONING_SECRET with your provisioning key and secret
 
 
 	::
@@ -224,12 +222,12 @@ Installation
 
 		sudo reboot
 
-	✔️ All done! You can now leave your Raspberry Pi running and the CIRRENT™ Agent will automatically collect data.
+	All done! You can now leave your Raspberry Pi running and the CIRRENT™ Agent will automatically collect data.
 
 Next Steps
 ^^^^^^^^^^^
 
-The CIRRENT™ Agent will start reporting some data like the SSID, BSSID, router that the Raspberry Pi is connected to after the first few minutes, while some data such as metrics and connectivity values take up to a day for the CIRRENT™ Agent to collect and report.
+The CIRRENT™ Agent will start reporting data including the SSID, BSSID, and router that the Raspberry Pi is connected to after the first few minutes, while some data such as metrics and connectivity values take up to a day for the CIRRENT™ Agent to collect and report.
 
 To view data for all devices in an account, please visit:
 
@@ -242,7 +240,7 @@ To start viewing your Raspberry Pi’s data simply go the Device Inspector page 
 Installation example: CIRRENT™ Agent on ModusToolbox
 *****************************************************
 
-If you’re making use of ModusToolbxo you can follow the instructions below to start the CIRRENT™ Agent with PSoC® 6 MCU and CYW43xxx connectivity devices. The example establishes a connection with a user defined Wi-Fi network and then starts the CIRRENT™ Agent to monitor the Wi-Fi network and upload data to the CIRRENT™ Cloud to enable the INI feature.
+If you’re making use of ModusToolbox you can follow the instructions below to start the CIRRENT™ Agent with PSoC® 6 MCU and CYW43xxx connectivity devices. The example establishes a connection with a user defined Wi-Fi network and then starts the CIRRENT™ Agent to monitor the Wi-Fi network and upload data to the CIRRENT™ Cloud to enable the INI feature.
 
 Requirements
 ^^^^^^^^^^^^^
@@ -251,23 +249,22 @@ You need access to the following to start CIRRENT™ Agent on ModusToolbox:
 
 * ModusToolbox™ software v2.3, patched to version 2.3.1 – `download it here <https://www.cypress.com/products/modustoolbox-software-environment>`_
 
-* Programming Language: C
+* Programming language: C
 
-* Supported Toolchains: Arm GCC
+* Supported toolchains: Arm GCC
 
 * One of two supported parts: all `PSoC® 6 MCU <http://www.cypress.com/PSoC6>`_ parts with either `CYW43012 <https://www.cypress.com/documentation/product-overviews/cypress-cyw43012>`_ or `CYW4343W <https://www.cypress.com/documentation/datasheets/cyw4343w-single-chip-80211-bgn-macbasebandradio-bluetooth-41>`_ chips
 
-* CIRRENT™ Developer Account with access to the [CIRRENT™ Console](https://cirrent.infineon.com)
+* CIRRENT™ Developer Account with access to the CIRRENT™ Console.
 
-* Wi-Fi network with Internet access
+* Wi-Fi network with internet access
 
-The follow instructions support two kits – `the PSoC 6 Wi-Fi BT Prototyping Kit <https://www.cypress.com/CY8CPROTO-062-4343W) (CY8CPROTO-062-4343W>`_ and the `PSoC 62S2 Wi-Fi BT Pioneer Kit <https://www.cypress.com/CY8CKIT-062S2-43012>`_.
+The follow instructions support two kits – `the PSoC 6 Wi-Fi BT Prototyping Kit <https://www.infineon.com/cms/en/product/evaluation-boards/cy8cproto-062-4343w>`_ and the `PSoC 62S2 Wi-Fi BT Pioneer Kit <https://www.infineon.com/cms/en/product/evaluation-boards/cy8ckit-062s2-43012/?utm_source=cypress&utm_medium=referral&utm_campaign=202110_globe_en_all_integration-dev_kit>`_.
 
 Required hardware and software configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-This example uses the board's default configuration. See the kit user guide to ensure that the board is configured correctly.
-Note that you need to install a terminal emulator if you don't have one. You can follow the instructions in this document.
+This example uses the board's default configuration. See your kit’s user guide to ensure that the board is configured correctly. Note that you need to install a terminal emulator if you don’t have one.
 
 Using the code examples
 ^^^^^^^^^^^^^^^^^^^^^^^^
@@ -292,7 +289,8 @@ In Eclipse IDE for ModusToolbox:
 
 4.	Optionally, update the **Application Name:** and **Location** fields with the application name and local path where the application is created.
 5.	Click **Create** to complete the application creation process.
-For more details, see the Eclipse IDE for ModusToolbox User Guide: *{ModusToolbox install directory}/ide_{version}/docs/mt_ide_user_guide.pdf*.
+
+For more details, see the Eclipse IDE for ModusToolbox User Guide: `Eclipse IDE User Guide <https://www.infineon.com/dgdl/Infineon-Eclipse_IDE_for_ModusToolbox_User_Guide_1-UserManual-v01_00-EN.pdf?fileId=8ac78c8c7d718a49017d99bcb86331e8>`_
 
 In Command-line Interface (CLI):
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

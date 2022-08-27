@@ -12,6 +12,7 @@ To access your CIRRENT™ MAI dashboards, simply log in to the CIRRENT™ Consol
 Starting at the top left corner, you will see a grid of tiles holding data and charts. For a deeper dive into any of the charts, just click on the expansion button  
 
 .. image:: ../img/mai-icon.png
+    :width: 50
     :align: center
     :alt: Dashboard 2
 

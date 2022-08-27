@@ -26,6 +26,8 @@ Today Infineon's cloud software services consist of the following offerings:
    :maxdepth: 2
    :hidden:
 
+   /cirrent-osts
+
    /cirrent-console
 
    /cirrent-ini

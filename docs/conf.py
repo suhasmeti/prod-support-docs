@@ -54,7 +54,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Cirrent Support Docs'
-copyright = u'Cypress Semiconductor Corporation. All rights reserved.'
+copyright = u'1999 - 2022 Infineon Technologies AG.'
 author = u'Tahir Mushtaq'
 
 #github_doc_root = 'https://github.com/rtfd/recommonmark/tree/master/docs/'
@@ -295,7 +295,7 @@ texinfo_documents = [
 html_static_path = ['_static']
 html_theme_path = ['_themes']
 
-html_logo = '_static/image/IFX_ICON.png'
+html_logo = '_static/image/IFX_LOGO_RGB.png'
 
 # The name of an image file (within the static path) to use as favicon of the
 # docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
@@ -313,16 +313,9 @@ def setup(app):
         'enable_auto_doc_ref': True,
     }, True)
     app.add_transform(AutoStructify)
-    app.add_css_file('https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.1.1/flatly/bootstrap.min.css')
     app.add_css_file('css/theme_overrides.css')
-    app.add_css_file('css/cookie_style.css')
     app.add_js_file('js/searchtools.js')
     app.add_js_file('js/custom.js')
-    app.add_js_file('js/cookies_script.js')
-
-html_js_files = [('https://www.googletagmanager.com/gtag/js?id=UA-186719284-2', {'async': 'async'}),
-                ('https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js', {'crossorigin': 'anonymous'}),
-                ('https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js', {'crossorigin': 'anonymous'})]
 
 
-
+html_js_files = [('https://kumar-tallapalli.github.io/cookiePopUpFromOnePlace/gtm_dynamic_load_script.js', {'crossorigin': 'anonymous'})]
