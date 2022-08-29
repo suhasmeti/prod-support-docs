@@ -1,7 +1,7 @@
 ﻿Getting started with INI
 ========================
 
-Getting started with INI is easy, hassle-free and secure. To get started, `register for a free account <https://cirrent.infineon.com/login>`_. Next, integrate the CIRRENT™ Agent on your device, and onboard your device to CIRRENT™ Cloud. Then, simply sit back and watch the data flow into the CIRRENT™ Console, a secure dashboard that provides deep visibility into the performance of your IoT products both at the fleet level, and at individual device-level.
+Getting started with INI is easy, hassle-free and secure. To get started, `register for a free account <https://osts.infineon.com/login>`_. Next, integrate the CIRRENT™ Agent on your device, and onboard your device to CIRRENT™ Cloud. Then, simply sit back and watch the data flow into the CIRRENT™ Console, a secure dashboard that provides deep visibility into the performance of your IoT products both at the fleet level, and at device-level.
 
 *************************
 Steps to configuring INI
@@ -10,7 +10,7 @@ Steps to configuring INI
 Interested in testing INI on your device? You need to complete a few steps to configure INI and to start receiving device analytics:
 
 * | **Register for an account on CIRRENT™ Cloud** 
-  | Registration is free and you can do so via this link. Registering automatically creates a user profile on CIRRENT™ Cloud, and gives you full access to CIRRENT™ Console.
+  | Registration is free and you can do so via this link: `Infineon Online Tools and Servcies <https://osts.infineon.com/login>`_  . Registering automatically creates a user profile on CIRRENT™ Cloud, and gives you full access to CIRRENT™ Console.
   |
 
 * | **Install the CIRRENT™ Agent on your device**
@@ -18,7 +18,7 @@ Interested in testing INI on your device? You need to complete a few steps to co
   |
   |	* View the general steps for installing the `CIRRENT™ Agent on a Linux device <cirrent-agent.rst#installing-cirrent-agent-on-linux>`_
   |	* View specific steps to configure `CIRRENT™ Agent on Raspberry Pi <cirrent-agent.rst#installation-example-cirrent-agent-on-raspberry-pi>`_ 
-  |	* View specific steps for configuring `CIRRENT™ Agent using ModusToolbox <cirrent-agent.rst#using-the-cirrent-agent-in-modustoolbox>`_
+  |	* View specific steps to configure `CIRRENT™ Agent using ModusToolbox <cirrent-agent.rst#using-the-cirrent-agent-in-modustoolbox>`_
 
 	Please contact us on support@cirrent.com if your device runs RTOS. 
 
@@ -31,7 +31,7 @@ Interested in testing INI on your device? You need to complete a few steps to co
 * | **Reviewing your analytics on CIRRENT™ Console**
   | Once data starts steaming in from CIRRENT™ Agent you will be able to review a range of analytics across all your devices, and drill down into device specific analytics. You can read more about the CIRRENT™ Console here.
 
-.. note:: Before you get started with INI you must have an active CIRRENT™ Cloud account so that you register your device and access CIRRENT™ Console where you will view your device data. You also need a device that is compatible with the CIRRENT™ Agent – you can view the requirements here. 
+.. note:: Before you get started with INI you must have an active CIRRENT™ Cloud account so that you can register your device and access the CIRRENT™ Console where you will view your device data. You also need a device that is compatible with the CIRRENT™ Agent – you can view the requirements here. 
 
 .. note:: CIRRENT™ Agent is already pre-installed on a select range of INFINEON products, including INFINEON AIROC™ Wi-Fi.
 
@@ -61,12 +61,14 @@ Both CIRRENT™ Wi-Fi onboarding apps also enable you to easily register a singl
 To access the **Android** CIRRENT™ Wi-Fi onboarding app, simply scan the code below:
 
 .. image:: ../img/androidqr.png
+    :width: 200
     :align: center
     :alt: Dashboard 2
  
 For the **iOS** edition of the app, scan the following code:
 
 .. image:: ../img/iphoneqr.png
+    :width: 200
     :align: center
     :alt: Dashboard 2
  

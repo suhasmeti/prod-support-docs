@@ -1,7 +1,7 @@
 INI Data Model
 ================
 
-CIRRENT™ IoT Network Intelligence collects a range of standard measurements and attributes by default. When the CIRRENT™ Agent is active on your device it automatically collects these measurements and submits it to the CIRRENT™ Cloud. The measurements below are all visible in the CIRRENT™ Console, review the CIRRENT™ Console page here to see how you can view your fleet’s data. Measurements collected by the CIRRENT™ Agent can be classified into four categories: 
+CIRRENT™ IoT Network Intelligence (INI) collects a range of standard measurements and attributes by default. When the CIRRENT™ Agent is active on your device it automatically collects these measurements and submits it to the CIRRENT™ Cloud. The measurements below are all visible in the CIRRENT™ Console. Review the CIRRENT™ Console page here to see how you can view your fleet’s data. Measurements collected by the CIRRENT™ Agent can be classified into four categories: 
 
 * **Events** that flag any specific network or hardware related issues experience by your device, also used to monitor the frequency with which these issues occur across your fleet.
 
@@ -24,7 +24,7 @@ An event is an issue or error experienced by a device. Below is a list of events
 
 .. note:: Note that some events are instantaneous – where there is no duration to the event. Other events are continuous, with a specific start and end. 
 
-The following events indicate that your device is disconnected from Wi-Fi, and will help you to understand what caused the disconnection.
+The following events indicate that your device is disconnected from the internet, and will help you to understand what caused the disconnection.
 
 * **Wi-Fi Not Associated:** A continuous event indicating that the device is not connected to the Wi-Fi network.
 
@@ -34,7 +34,7 @@ The following events indicate that your device is disconnected from Wi-Fi, and w
 
 * **Gateway Error:** Device is having trouble communicating with the router.
 
-* **Gateway Internet Error:** User’s router is not connected to the Internet.
+* **Gateway Internet Error:** Gateway Internet Error: The user’s router is not connected to the internet.
 
 * **TLS Errors:** HTTPS request to a configurable validation target fails with a TLS error, either due to certificate expired, or certificate valid in the future, or certificate hostname mismatch.
 
@@ -54,7 +54,7 @@ These metrics indicate atypical or unusual Wi-fi radiofrequency conditions that 
 
 * **Wi-Fi Interference:** Device is experiencing Wi-Fi interference while uploading data.
 
-* **Low storage:** The available storage capacity on the device is below a threshold.
+* **Low Storage:** The available storage capacity on the device is below a threshold.
 
 The following metric-based events enable you to understand system level performance of your fleet of connected products in the field:
 
@@ -64,55 +64,56 @@ The following metric-based events enable you to understand system level performa
 
 * **Restarted:** The system was restarted.
 
-* **Restart Triggered:** CIRRENT™ Agent detected something in the system triggered a restart.
+* **Restart Triggered:** CIRRENT™ Agent detected that something in the system triggered a restart.
 
-* **Shutdown Triggered:** CIRRENT™ Agent detected something in the system triggered a shutdown.
+* **Shutdown Triggered:** CIRRENT™ Agent detected that something in the system triggered a shutdown.
 
 
 Note that for users of Infineon AIROC™ Wi-Fi, the CIRRENT™ Agent will also collect the following events: 
 
-* high beacon loss
-* high glitch count
-* high SNR
-* high noise level
+* High Beacon Loss
+* High Glitch Count
+* High SNR
+* High Noise Level
 
 *************
 Measurements
 *************
 
-A measurement represents numerical data that varies with time, and which may help determine system conditions when an event occurs. Measurements are reported in CIRRENT™ Console for each individual device and are not shown at an aggregate level. The CIRRENT™ Agent collects the following measurements for network monitoring:
+A measurement represents numerical data that varies with time, and which may help determine system conditions when an event occurs. Measurements are reported in CIRRENT™ Console for each individual device. The CIRRENT™ Agent collects the following measurements for network monitoring:
 
 * **Network Performance Score:** This metric shows the overall connectivity score. The score is a calculation based on the reported DHCP, DNS, gateway, TLS and Wi-Fi events.
+  |
 
-* Analyzing this score is sensitive to the requirements of the device – for example, distinguishing between the minimal connectivity required by a microwave and the higher throughput required by a streaming device. 
+Analyzing this score is sensitive to the requirements of the device – for example, distinguishing between the minimal connectivity required by a microwave and the higher throughput required by a streaming device. 
 
 * **Download Speed and Upload Speed (in Kbps):** measure the upstream and downstream throughput of the device.
 
 * **Packet Error Rate %:** calculated (if total number of tx packets larger than 100) as ratio between number of retried and failed tx packets.
 
-* **Signal Strength:** The signal strength with Wi-Fi access point.
+* **Signal Strength:** The signal strength of the link to the Wi-Fi access point.
 
 * **ICMP Packet Loss measurements:** Packet loss measured as a percentage of packets lost with respect to packets sent (default gateways are google.com and yahoo.com).
 
 Note that for users of Infineon AIROC™ Wi-Fi, the CIRRENT™ Agent will also collect the following measurements: 
 
-* **RX/TX counters:** including bad fcs, bad plcp, beacons – mbss, beacons – ombss, crs glitches
+* **RX/TX Counters:** including bad fcs, bad plcp, beacons – mbss, beacons – ombss, crs glitches
 
-* **CCA statistics:** ibss, obss, interference
+* **CCA Statistics:** ibss, obss, interference
 
 **Measurement date type**
 
 The measurement data type is a special data type in the CIRRENT™ Cloud. Based on measurement data, the CIRRENT™ Cloud automatically generates a range of calculations to support your analysis, including:
 
-* **Average measurement value**, calculated by dividing the sum of the measurements by the number of measurements submitted
+* **Average Measurement Value**, calculated by dividing the sum of the measurements by the number of measurements submitted
 
-* **The total sample count**, a simple count of the number of measurements submitted
+* **The Total Sample Count**, a simple count of the number of measurements submitted
 
-* **A sampling interval**, e.g. 30 or 60, a calculation of the frequency of sample submission
+* **A Sampling Interval**, e.g. 30 or 60, a calculation of the frequency of sample submission
 
-* **A maximum value and a minimum value** specifying the highest measurement submitted and the lowest measurement submitted 
+* **A Maximum Value and a Minimum Value** specifying the highest measurement submitted and the lowest measurement submitted 
 
-* **a standard deviation** that specifies the standard deviation of the measurements taken
+* **A Standard Deviation** that specifies the standard deviation of the measurements taken
 
 
 .. note:: The CIRRENT™ Agent API allows you to add your own custom measurements to report numerical data relevant to your application or system. For example, you could report memory usage or CPU temperature data. Read more about using the CIRRENT™ Agent API here.
@@ -143,7 +144,7 @@ An attribute is a characteristic or parameter of a group of devices. Attributes 
 
 * **CPU:** CPU model of the device.
 
-* **Wi-Fi Driver version:** the Wi-Fi driver version of the device.
+* **Wi-Fi Driver version:** The Wi-Fi driver version of the device.
 
 * **Wi-Fi Radio version:** The Wi-Fi radio version of the device.
 
@@ -161,7 +162,7 @@ Similar to attributes, state values are also likely to remain consistent for lon
 
 * **Channel:** The Wi-Fi channel the device is operating on.
 
-* **Wi-Fi Scan:** monitors whether the device is currently performing a Wi-Fi Scan.
+* **Wi-Fi Scan:** Monitors whether the device is currently performing a Wi-Fi Scan.
 
 
 If you’re using an AIROC™ device the CIRRENT™ Agent will also collect the following states:
@@ -170,7 +171,7 @@ If you’re using an AIROC™ device the CIRRENT™ Agent will also collect the 
 
 * Beacon Interval 
 
-* Beacon timeout (not sure)
+* Beacon Timeout
 
 * Bluetooth co-existence settings  
 

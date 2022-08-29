@@ -180,6 +180,7 @@ By Environment
 This is a benchmarking tool. To get the most out of the dashboard, click the settings button 
 
 .. image:: ../img/icon.png
+    :width: 50
 
 and choose what metric you’d like to view. Choose environment - from ISP, router, country or a combination of those. Then choose any attribute or attribute combination to compare against any other attribute or combination of attributes.
 
@@ -261,6 +262,250 @@ You can also view a complete list of all attributes recorded for the device, inc
     :align: center
     :alt: Dashboard 2
 
+
+***********
+Quantiler
+***********
+
+
+You can get a sense of the overall performance of a group of devices by using the CIRRENT™ Console’s Quantiler to analyze the statistical performance of a specific measurement or event metric according to your attribute of choice, including dividing the values into quantiles to see how the values in a group are distributed. 
+ 
+.. image:: ../img/q-ini-1.png
+    :align: center
+    :alt: Dashboard 2
+
+(The Quantiler view)
+Quantiler splits the device data into a number of  separate data sets, with a distinct data set for each reported attribute value. It then separately analyzes the values for the measurement or event metric you selected within each of these data sets. In turn, you view a line by line analysis: each row represents an attribute value, and analyzes the measurements or event metrics collected for devices that report that attribute value.
+
+For example, you can configure the Quantiler to analyze device upload speeds by the **country** in which the device is located. In this instance, the **country** is the attribute by which Quantiler creates data sets for analysis. You will see a data set for each country attribute value reported by your group of decies. The line by line view reports the following figures for each dataset:
+
+* **Device Count:** The total number of devices counted in that data set, in other words the total number of devices that reported that attribute value.
+
+* **Average:** The statistical mean for the measurement or event metric, calculated by adding all the values for all devices in the data set to generate the total, and dividing that total by the device count in the data set.
+
+* **TP50:** The statistical median, the number of devices in the data set measuring below this value would be equal to the number of devices measuring above this value. Where the number of devices measured is odd, the median would be the middle value. Where the number of devices in the data set is even, the median number is the average of the two middle numbers.
+
+* **TP5:** Represents the 5th percentile, in other words, the value indicated there is lower than 95% of other values within the data set.
+
+* **TP95:** Represents the 95th percentile, the value which is greater than 95% of numbers within the data set.
+
+.. note:: For TP5 and TP95, measurements with negative values should be viewed in the right context as the meaning of TP5 and TP95 switches around where negative values such as signal strength are evaluated.
+ 
+
+Configuring the Quantiler view
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ 
+You can customize how you evaluate data in the Quantiler in a few ways. To start, set up the Quantiler by selecting two key aspects:
+
+* **Select between viewing a measurement or viewing an event metric.** CIRRENT™ Console divides data variables into two groups: measurements, and event metrics. In the Quantiler, you can choose to analyze a variable from either group. Simply navigate to the **Measurement** or **Event** tab as shown below:
+  
+  .. image:: ../img/q-ini-2.png
+    :align: center
+    :alt: Dashboard 2
+
+* Choose a variable to analyze. When you switch tabs, you’ll notice that the list of variables available to you changes. Measurement data is available on the **Measurement** tab, and event metrics are available on the **Event** tab. Use the variable box to choose the variable you’d like to analyze in the Quantiler, as shown below:
+
+  .. image:: ../img/q-ini-3.png
+    :align: center
+    :alt: Dashboard 2
+
+  All the standard CIRRENT™ variables are available to analyze, alongside any custom variables you configured.
+
+.. note:: any filters applied persists across the **Measurement** and the **Events** tab. When you switch tabs, your filter configuration will remain in place. 
+
+Customizing the Quantiler view
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ 
+The Quantiler helps you to drill down into your device data set by separating the data for your selected variable into a line-by-line analysis of the values for a specific attribute value. Each line in the table represents a unique data set, analyzing the data recorded for devices that match a specific attribute value. 
+
+It’s therefore easy to analyze data by a factor such as the **Router** the device is connected to. This will render a line-by-line analysis with a line each for Cisco, Netgear, TP-Link, etc. In turn, the Cisco line will analyze the data set of measurements or event metrics generated by all devices connected to a Cisco router.
+
+You can significantly customize the default view, a line-by-line analysis according to the country in which the device is located. To change this view, simply choose from the list of attributes as shown below and click **Apply**.
+ 
+.. image:: ../img/q-ini-4.png
+    :align: center
+    :alt: Dashboard 2
+
+In the example below, we selected the line titled TP-Link represents a dataset of devices that are linked to a TP-Link router:
+ 
+.. image:: ../img/q-ini-5.png
+    :align: center
+    :alt: Dashboard 2
+
+In the above example, network performance data sets for each router brand are analyzed individually – with individual counts, averages, and quintiles for every data set, listed line by line.
+
+You can also choose to filter the values in the Quantiler by a specific attribute value. You can filter according to one attribute value or choose to filter across multiple attribute values. To add the first attribute value you want to filter against, first select the attribute from the list of available attributes:
+
+.. image:: ../img/q-ini-6.png
+    :align: center
+    :alt: Dashboard 2 
+
+Next, select the filter you wish to apply to that attribute. For example, if you are searching by **Router Brand**, you will see a list of router manufacturers to choose from:
+ 
+.. image:: ../img/q-ini-7.png
+    :align: center
+    :alt: Dashboard 2
+
+Simply click on a **Router Brand** attribute value to add a filter for that brand. You can expand the included router brands included in your filter by clicking on other router brands, adding additional brands until you’ve included all the devices you’d like to include in your filtered view.
+
+You can further customize and expand the filter by choosing a different attribute to filter by and adding the selected value to the filter. For example, you could choose to look at devices connected to specific router brands which are in turn connected to specific ISPs.
+
+.. note:: to clear the attribute filters one by one, simply click the [X] next to the field, as shown below. You can clear all attribute filters by clicking on the **Reset** button.
+
+Finally, you can sort the values by any column, simply click on the heading title of that column. The first click sorts the values from lowest to highest. Click again to reverse the order from highest to lower. A third click removes the sorting selection.
+
+.. image:: ../img/q-ini-8.png
+    :align: center
+    :alt: Dashboard 2
+
+In the above example we are sorting the view from highest to lowest according to **Device Count**.
+ 
+Exporting data from the Quantiler
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ 
+Once you’ve configured your Quantiler view you can export the data in your view into a .csv file for further analyses in Excel or your tool of choice. Simply click on the Export button to the right of the Quantiler screen:
+
+.. image:: ../img/q-ini-9.png
+    :align: center
+    :alt: Dashboard 2
+
+To view the exported data, navigate to **Product Analytics** and click on **Data Exports**. The latest exports will be visible, sorted by the time point at which the export was triggered.
+ 
+.. image:: ../img/q-ini-10.png
+    :align: center
+    :alt: Dashboard 2
+
+.. note:: when you export a view, CIRRENT™ Console exports the entire data set in that view – it does not break down data into data sets derived from attribute values. Instead, you receive all of the data in the view with each data item on a separate line.
+
+*********************
+Anomaly Detection
+*********************
+
+You can use the CIRRENT™ Console’s **Anomaly Detection** page to evaluate anomalous device data at a glance. We currently support the analysis of **event metrics**. The Anomaly Detection page is split into two sections, displayed on two distinct tabs:
+ 
+.. image:: ../img/q-ini-11.png
+    :align: center
+    :alt: Dashboard 2
+
+First, the **Top Metrics** tab displays a list of the event metrics with the highest proportion of devices reporting an anomalous reading. Next, the **Attribute Explorer** tab enables you to deep-dive into metrics based on specific attributes.
+
+To access the Anomaly Detection page, simply navigate to **Product Analytics**, and click on **Anomaly Detection**.
+ 
+.. image:: ../img/q-ini-12.png
+    :align: center
+    :alt: Dashboard 2
+
+Top Metrics
+^^^^^^^^^^^^
+
+The **Top Metrics** tab displays a listing of the **event metrics** that are most associated with an anomalous reading. Currently, **Top Metrics** supports metrics based on event data only.  
+
+.. image:: ../img/q-ini-13.png
+    :align: center
+    :alt: Dashboard 2
+ 
+For example, in the above image you’ll notice that in this sample population of devices, **wifi_interference** and **network_performance** were most commonly associated with an anomalous reading.
+
+The **Top Metrics** tab lists metrics with the following fields:
+
+* **Name.** Contains the name of the metric represented by that line.
+
+* **Outliers.** A count of the number of devices that are reporting a value that qualifies as an outlier for that metric.
+
+* **% total.** The percentage of devices reporting an outlier value for that metric, calculated by dividing the count of devices that reported anomalous readings for that event metric by the total number of devices reporting to the account. 
+
+* **Avg TP5.** Represents the 5th percentile, in other words, the TP5 value is lower than 95% of other values for that metric.
+
+* **Avg TP50.** The statistical median, the number of devices measuring below this value would be equal to the number of devices measuring above this value. Where the number of devices measured is odd, the median would be the middle value. Where the number of devices in the data set is even, the median number is the average of the two middle numbers.
+
+* **Avg TP95.** Represents the 95th percentile, the value which is greater than 95% of values for that metric.
+
+You can also view a **Total Devices** count, which represents the total number of devices reporting into your account, at the top right of the page:
+ 
+.. image:: ../img/q-ini-14.png
+    :align: center
+    :alt: Dashboard 2
+
+By default, the metrics are listed starting with the metric with the highest number of outlying values.
+ 
+Attribute Explorer
+^^^^^^^^^^^^^^^^^^^
+ 
+The Anomaly Detection page also allows you to explore anomalies for a specific event metric by breaking event metrics down according to the reported values for specific device attributes. You access this report on the **Attribute Explorer** tab.
+
+Each line represents a specific attribute value. For example, you can determine which routers are creating high counts for network performance events by breaking down **network performance** events by router. In the example below, each line represents a specific router:
+
+.. image:: ../img/q-ini-15.png
+    :align: center
+    :alt: Dashboard 2
+
+Configuring the Attribute Explorer
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ 
+Currently, the Attribute Explorer supports event metrics only. That includes any custom events you may have defined. Your first step in configuring the Attribute Explorer is selecting the event metric you would like to analyze:
+
+.. image:: ../img/q-ini-16.png
+    :align: center
+    :alt: Dashboard 2
+
+By selecting **Network Performance**, for example, you can review the outliers for network performance events according to your choice of attribute. As a next step you select the attribute you want to evaluate for outliers from the list of available attributes:
+
+.. image:: ../img/q-ini-17.png
+    :align: center
+    :alt: Dashboard 2
+
+You can add multiple attributes to evaluate, simply continue to select attributes from the list of available attributes. For example, you could choose to review **Network Performance** outliers both by **Router Brand** and by **ISP:**
+
+.. image:: ../img/q-ini-18.png
+    :align: center
+    :alt: Dashboard 2
+
+The resulting screen shows you a line-by-line analysis where each line represents a particular attribute, and a specific value for that attribute. Attribute Explorer will dedicate a line to every value logged for a particular attribute – but excluding any attribute value for which the outlier count is zero. 
+
+In the example above, you’ll notice lines for **ISP** and for **Router** – because we’ve chosen to evaluate outliers for network performance events both by Router and by ISP. By default, the attribute value with the largest number of outliers is displayed at the top, with attribute values then listed in descending order of outlier count.
+
+Every Attribute Explorer screen includes two counters. The total number of devices analyzed in the account, and the total number of devices in the account that reported an outlying reading for the metric you chose to evaluate:
+
+.. image:: ../img/q-ini-19.png
+    :align: center
+    :alt: Dashboard 2
+
+For each attribute value, the following is displayed: 
+
+* **Attribute device count:** number of devices that reported the specified value for that attribute.
+
+* **Outliers:** number of devices that reported the specified value for that attribute and that also reported an outlier reading for the metric under evaluation.
+
+* **% outliers:** for the devices reporting that attribute value, the percentage of devices that report an outlier reading.
+
+* **% attrib:** for the attribute value in that row, the percentage of devices in the fleet that reported that specific attribute value.
+
+* **Impact:** an impact score, calculated by multiplying the %outliers by %attrib. For example, if 50% of devices with that attribute value report outlier scores and if 25% of the devices being analyzed match that attribute, the impact score would be 0.50 x 0.25 x 100 = 12.5.
+
+.. note:: When you change the metric you are evaluating CIRRENT™ Console will retain your attribute selections.
+
+.. note:: To clear the attributes you are analyzing one by one, simply click the [X] next to the attribute, or click the down arrow and deselect attributes one by one – as shown below. You can clear all attribute filters by clicking on the **Reset** button, which restores the default attributes of **Router** and **ISP**.
+
+.. image:: ../img/q-ini-20.png
+    :align: center
+    :alt: Dashboard 2
+
+
+Exporting data from the Anomaly Detector
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ 
+Once you’ve configured a view you can export the data in your view into a .csv file for further analyses in Excel or your data package of choice. Simply click on the **Export button** to the right of the screen:
+
+.. image:: ../img/q-ini-21.png
+    :align: center
+    :alt: Dashboard 2
+
+To view the exported data, navigate to **Product Analytics** and click on **Data Exportsv. The latest exports will be visible, sorted by the time point at which the export was triggered.
+ 
+.. image:: ../img/q-ini-22.png
+    :align: center
+    :alt: Dashboard 2
+
 ***************************************
 Exporting data from the CIRRENT™ Cloud
 ***************************************
@@ -269,6 +514,7 @@ The CIRRENT™ Console allows you to export data from the CIRRENT™ Cloud.
 You start the export process using the
 
 .. image:: ../img/icon-2.png
+    :width: 50
    
 button located next to the chart or table you are viewing. 
 

@@ -1,22 +1,8 @@
 CIRRENT™ Console
 =================
 
-The CIRRENT™ Console is the web application that you use to interact with the full range of CIRRENT™ services. You can access the CIRRENT™ Console here: https://cirrent.infineon.com.
+.. note:: CIRRENT™ Console is now INFINEON OSTS Console. `View our announcement here <cirrent-osts.rst>`_ to understand what's changed. 
 
-CIRRENT™ Console Sections
---------------------------
-
-The CIRRENT™ Console is organized into four sections. Your CIRRENT™ account status determines which CIRRENT™ Console sections you can access, depending on the CIRRENT™ products and services you subscribe to.
-
-* **Product analytics** including sections covering the analytics and investigative tools included in CIRRENT™ Product Analytics, including CIRRENT™ INI and CIRRENT™ MAI. Sections included under the Product Analytics tab include Device Fleet, Device Inspector, App Inspector, Customer Support, Dashboard Manager and Data Exports.
-
-* **Device management** enables you to manage the devices enrolled in the CIRRENT™ Cloud. Use this section to manage device enrollment and authentication. Under this section you can access CIRRENT™ Cloud ID and you can also view a full list of Active Devices.
-
-* **Development** includes two developer tools – the Log Explorer and a Token Validator.
-
-* **Accounting settings** allows you to manage API keys for the CIRRENT™ Mobile App SDK, and contains an area for user management. 
-
-.. note:: The sections that are visible in your CIRRENT™ Console depend on the CIRRENT™ services you subscribe to, and the role your assigned to your user. 
 
 CIRRENT™ Console User Architecture
 -----------------------------------
@@ -42,6 +28,8 @@ Each user in an account can be assigned one or more roles. The roles available t
 * **Developer role:** allows users to log in to the console and see data for devices on the account
 
 * **Operations role:** allows a user to add Device Types and Devices to an account
+
+* **Cloud ID role:** a role specific to CIRRENT™ Cloud ID customers, enables the user to bind compatible devices to their Cloud ID account
 
 * **Administrator role:** includes the ability to create or delete users, create and delete API keys
 

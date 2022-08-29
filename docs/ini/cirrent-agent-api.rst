@@ -27,9 +27,9 @@ You can submit a range of custom data through the CIRRENT™ Agent API. This inc
 
 * | Measurement is a numerical value, sent as a floating point value, used to collected values such as CPU temperature or available storage
 
-* | Attribute is a string of up to 100 characters which contains any text you would like to record in CIRRENT™ Cloud that matches attribute data type 
+* | Attribute is a string of up to 100 characters which contains any text you would like to record in CIRRENT™ Cloud that matches the attribute data type 
 
-* | State is a string of up to 100 characters which contains any text you would like to record in CIRRENT™ Cloud that matches status data type
+* | State is a string of up to 100 characters which contains any text you would like to record in CIRRENT™ Cloud that matches the status data type
   | 	
   |	Accepted values for each argument:
 
@@ -89,7 +89,7 @@ There are three arguments in every cirrent_cli ini_custom call:
 
 1.	**type**
 
-	* This case-sensitive string must be one of event, measurement, attribute, or state, see below for accepted values.
+	* This case-sensitive string must be one of event, measurement, attribute, or state, see above for accepted values.
 
 2.	**name**
 
@@ -188,20 +188,13 @@ You can use the CIRRENT™ Agent API to execute jobs on a single device – or a
 
 Some of the tasks you can request the CIRRENT™ Agent to perform include:
 
-* **Device logs.** You can request that the CIRRENT™ Agent collects extensive logs from your device, above and beyond the data collected by default through the CIRRENT™ Agent. 
-
-  CIRRENT™ Agent saves the logs to the CIRRENT™ Cloud. You can use the logs to troubleshoot complex device issues by reviewing OS logs in depth – to diagnose problems such as driver failure. 
+* **Device logs.** You can request that the CIRRENT™ Agent collects extensive logs from your device, above and beyond the data collected by default through the CIRRENT™ Agent. CIRRENT™ Agent saves the logs to the CIRRENT™ Cloud. You can use the logs to troubleshoot complex device issues by reviewing OS logs in depth – to diagnose problems such as driver failure. 
 
 
-* **CIRRENT™ Network profile.** Likewise, you can request that the CIRRENT™ Agent collects and saves the full CIRRENT™ network profile to the CIRRENT™ cloud.
-
-  With the CIRRENT™ network profile you can diagnose complex network issues by viewing low-level network data including routing table, nameserver configuration and firewall settings. This profile could help you diagnose a range of glitches – for example, where a port was accidentally blocked on the network.
+* **CIRRENT™ Network profile.** Likewise, you can request that the CIRRENT™ Agent collects and saves the full CIRRENT™ network profile to the CIRRENT™ cloud. With the CIRRENT™ network profile you can diagnose complex network issues by viewing low-level network data including routing table, nameserver configuration and firewall settings. This profile could help you diagnose a range of glitches – for example, where a port was accidentally blocked on the network.
 
 
-* **Rolling INI data.** CIRRENT™ INI collects values every minute and submit the values to the CIRRENT™ Cloud. However, a rolling log of values is not stored on CIRRENT™ Cloud. Nonetheless, the CIRRENT™ Agent does store a 24 hour rolling log on the device.
-
-  You can use the CIRRENT™ Agent API to collect these raw values which can deliver unique insights. For example, when you know that a specific event occurred, you can use the raw rolling log to tell exactly when that event happened.
-  
+* **Rolling INI data.** CIRRENT™ INI collects values every minute and submit the values to the CIRRENT™ Cloud. However, a rolling log of values is not stored on CIRRENT™ Cloud. Nonetheless, the CIRRENT™ Agent does store a 24 hour rolling log on the device. You can use the CIRRENT™ Agent API to collect these raw values which can deliver unique insights. For example, when you know that a specific event occurred, you can use the raw rolling log to tell exactly when that event happened.
 
 It is also possible to use the CIRRENT™ Agent to remotely run custom jobs of your own design. Contact support@cirrent.com for more information.
 Running a job on your device is simple. Just navigate to the Device Inspector on the CIRRENT™ Console, and Explore your device. The list of pending jobs and the option to trigger new jobs is listed under the Jobs tab.
@@ -224,16 +217,16 @@ API calls to libcirrent
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 +----------------------------+---------------------------------------------------------------------------------------------------+
-| api_init                   | Initializes the API. Must be called before any other API calls are made.                          |
+| api_init                   | Initializes the API. Must be called before any other API calls are made                           |
 +----------------------------+---------------------------------------------------------------------------------------------------+
-| api_cleanup                | Cleanup after done with ca api, i.e. client app shuts down                                        |
+| api_cleanup                | Cleanup after done with CIRRENT™ Agent API, i.e. client app shuts down                            |
 +----------------------------+---------------------------------------------------------------------------------------------------+
 | api_get_network_info       | Retrieves the current network info and the network capabilities. Your device code should use this |
 |                            | information to determine which services can be started on the device. For example, with a 20kbps  |
-|                            | bandwidth limitation you will not want to start video streaming.                                  |
+|                            | bandwidth limitation you will not want to start video streaming                                   |
 +----------------------------+---------------------------------------------------------------------------------------------------+
 | wifi_scan                  | Retrieves the most recent wi-fi scan list from the CA.  ca_api_free_wifi_scan should be called to |
-|                            | free the network list that is returned.                                                           |
+|                            | free the network list that is returned                                                            |
 +----------------------------+---------------------------------------------------------------------------------------------------+
 | free_wifi_scan             | Frees network scan list returned by @ref ca_api_get_wifi_scan                                     |
 +----------------------------+---------------------------------------------------------------------------------------------------+
@@ -251,16 +244,16 @@ API calls to libcirrent
 +----------------------------+---------------------------------------------------------------------------------------------------+
 | api_reset_device();        | Resets the Device - resets CIRRENT™ cloud status for this device                                  |
 +----------------------------+---------------------------------------------------------------------------------------------------+
-| api_cloud_sync(void);      | Triggers frequent communication with the CIRRENT™ cloud for short period of time.                 |
+| api_cloud_sync(void);      | Triggers frequent communication with the CIRRENT™ cloud for short period of time                  |
 +----------------------------+---------------------------------------------------------------------------------------------------+
 | make_discoverable();       | Makes CA discoverable Triggers the CA to bring up the SoftAP so that the user has the option to   |
-|                            | locally  configure the private network credentials.                                               |
+|                            | locally  configure the private network credentials                                                |
 +----------------------------+---------------------------------------------------------------------------------------------------+
 | register_status_handler    | Register for status change callbacks                                                              |
 +----------------------------+---------------------------------------------------------------------------------------------------+
 | enable_notifications       | Enables notifications from cirrent_agent                                                          |
 +----------------------------+---------------------------------------------------------------------------------------------------+
-| disable_notifications      | Disables notifications from cirrent_agent.                                                        |
+| disable_notifications      | Disables notifications from cirrent_agent                                                         |
 +----------------------------+---------------------------------------------------------------------------------------------------+
 | register_status_script     | Registers a script which will be called whenever a network status changes                         |
 +----------------------------+---------------------------------------------------------------------------------------------------+
@@ -296,11 +289,11 @@ Commands available on cirrent_cli
 +----------------------------+---------------------------------------------------------------------------------------------------+
 | make_discoverable          | Make the CIRRENT™ Agent discoverable                                                              |
 +----------------------------+---------------------------------------------------------------------------------------------------+
-| register_status_script     | register a script that will get called when there is a change in network status                   |
+| register_status_script     | Register a script that will get called when there is a change in network status                   |
 +----------------------------+---------------------------------------------------------------------------------------------------+
-| ini_custom                 | upload custom IoT Network Intelligence data                                                       |
+| ini_custom                 | Upload custom IoT Network Intelligence data                                                       |
 +----------------------------+---------------------------------------------------------------------------------------------------+
-| quit                       | exit cirrent_cli                                                                                  |  
+| quit                       | Exit cirrent_cli                                                                                  |  
 +----------------------------+---------------------------------------------------------------------------------------------------+
 
 For full details on these commands including parameters and responses please contact us on support@cirrent.com. 
