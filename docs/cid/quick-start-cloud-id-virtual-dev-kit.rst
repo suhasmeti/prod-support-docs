@@ -58,7 +58,7 @@ D.  Now, log in at https://cirrent.infineon.com/login using the credentials you 
 
 E.  Give your account a name and click **Create**. Add any team members you’d like to include, and click **Add**.
 
-F.  Now, try to find the Cloud ID section in the CIRRENT™ Console – navigate to **Device Management** and **Cloud ID**. You can also directly access the page with this URL: https://cirrent.infineon.com/cloud-devices/infineon-devices.
+F.  Now, try to find the Cloud ID section in the CIRRENT™ Console – navigate to **Device Management** and **Cloud ID**. You can also directly access the page with this URL: https://osts.infineon.com/cloud-id.
 
 	.. image:: ../img/v-4.png
 
@@ -103,7 +103,7 @@ Now that you’ve completed the binding process you can view the results in the 
 
 **> Complete these steps using a PC and browser**
 
-A.  Navigate to Device Management and Cloud ID. You can also directly access the page with this URL: https://cirrent.infineon.com/cloud-devices/infineon-devices
+A.  Navigate to Device Management and Cloud ID. You can also directly access the page with this URL: https://osts.infineon.com/cloud-id
 
 B.  Verify that the devices you bound using a QR code are listed under the Binding section. You’ll notice a device count under # of Bound Devices.
 
@@ -124,7 +124,7 @@ In most scenarios, you will want to provision claimed devices directly into your
 
 **> Complete these steps using a PC and browser**
 
-A.  Navigate to **Device Management, Cloud ID**, and select the **Provisioning** tab. You can also follow this link https://cirrent.infineon.com/cloud-devices/provisioning.
+A.  Navigate to **Device Management, Cloud ID**, and select the **Provisioning** tab. You can also follow this link https://osts.infineon.com/cloud-id/provisioning.
 
 B.  Next, click on **Add Cloud API**.
 
@@ -138,7 +138,7 @@ D.  Confirm that the API link you’ve just added appears in the **Product Cloud
 
 You’ve now configured an API link to your Product Cloud and you’re ready to test provisioning devices directly into your Product Cloud. This is what you need to do to complete the provisioning step:
 
-A.  Navigate to **Device Management, Cloud ID**, or use this link – https://cirrent.infineon.com/cloud-devices/provisioning/
+A.  Navigate to **Device Management, Cloud ID**, or use this link – https://osts.infineon.com/cloud-id/provisioning/
 
 B. Ensure you’re on the **Binding** tab.
 
@@ -173,7 +173,7 @@ To automatically provision devices with your Product Cloud as soon as you bind a
 
 **> Complete these steps using a PC and browser**
 
-A.  Navigate to Device Management, Cloud ID, and select the Product Cloud APIs tab. You can also follow this link: https://cirrent.infineon.com/cloud-devices/provisioning
+A.  Navigate to Device Management, Cloud ID, and select the Product Cloud APIs tab. You can also follow this link: https://osts.infineon.com/cloud-id/provisioning
 
 B.  Slide the **When devices are Bound, automatically Provision to Product Cloud** slider to the **ON** position.
 
@@ -202,7 +202,7 @@ By scanning this QR code you’ve now bound your devices with CIRRENT™ Cloud I
 
 **> Complete these steps using a PC and browser**
 
-A.  Navigate to Device Management and Cloud ID. You can also directly access the page with this URL: https://cirrent.infineon.com/cloud-devices/infineon-devices.
+A.  Navigate to Device Management and Cloud ID. You can also directly access the page with this URL: https://osts.infineon.com/cloud-id.
 
 B.  Verify that on the Binding tab, your additional batch of devices is now listed.
 
