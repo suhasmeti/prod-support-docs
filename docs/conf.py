@@ -313,9 +313,9 @@ def setup(app):
         'enable_auto_doc_ref': True,
     }, True)
     app.add_transform(AutoStructify)
-    app.add_css_file('css/theme_overrides.css?v=4')
-    app.add_js_file('js/searchtools.js?v=4')
-    app.add_js_file('js/custom.js?v=4')
+    app.add_css_file('css/theme_overrides.css?v=5')
+    app.add_js_file('js/searchtools.js?v=5')
+    app.add_js_file('js/custom.js?v=5')
 
 
 html_js_files = [('https://gundlapallys.github.io/openDocsServices/gtm_dynamic_load_script.js', {'crossorigin': 'anonymous'})]
