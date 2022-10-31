@@ -2,6 +2,10 @@
 $(document).ready(function(){
 	try{
 		
+		let locationHrefPath = window.location.href;
+		if(locationHrefPath.endsWith("/latest"))
+			window.location.href = locationHrefPath+"/";
+		
 	$('a[href*="cypresssemiconductorco"]').each(function(){ 
 		var oldUrl = $(this).attr("href"); 
 		var sampleText = $(this).text().replace("cypresssemiconductorco", "Infineon");
