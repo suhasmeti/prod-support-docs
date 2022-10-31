@@ -21,8 +21,14 @@
 
   {# CSS #}
   <!-- Latest compiled and minified CSS -->
-
-
+  <script type="text/javascript">
+	function redirectScriptCheck()
+	{
+		let locationHrefPath = window.location.href;
+		if(locationHrefPath.endsWith("/latest"))
+			window.location.href = locationHrefPath+"/";
+	}
+  </script>
   <link rel="stylesheet" href="{{ pathto('_static/' + style, 1) }}" type="text/css" />
   <link rel="stylesheet" href="{{ pathto('_static/pygments.css', 1) }}" type="text/css" />
   {%- for css in css_files %}
@@ -108,7 +114,7 @@
   {%- block extrahead %} {% endblock %}
 </head>
 
-<body class="wy-body-for-nav">
+<body class="wy-body-for-nav" onload="redirectScriptCheck()">
 
   <div class="new-nav">
     <div class="nav-left">
