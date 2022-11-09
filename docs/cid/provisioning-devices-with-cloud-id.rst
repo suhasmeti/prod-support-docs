@@ -167,7 +167,7 @@ Broadly speaking, you need to take the following steps to ensure that your Produ
 * | Configure the necessary users and associated permissions to enable two-way communications
   |
 
-For some Product Cloud configurations it is possible to automate the above steps. If you are using AWS, you can make use of the AWS CloudFormation template to do that. We describe the steps for using the AWS Cloud Formation template in the next section.
+For some Product Cloud configurations it is possible to automate the above steps. If you are using AWS, you can make use of the AWS CloudFormation template to do that. CIRRENT™ Cloud ID also offers automated provisionign for Azure IoT Hub.  We describe the steps for using the AWS Cloud Formation template and Azure IoT Hub in the next sections.
 
 
 Setting up the AWS CloudFormation template
@@ -182,7 +182,7 @@ You may want to review the CloudFormation Best Practices and Security section in
 
 1. Click on the following link to execute the CloudFormation template. By default, the link uses the **us-west-1** region: 
 
-    `https://us-west-1.console.aws.amazon.com/cloudformation/home?region=us-west-1#/stacks/create/template?stackName=infineon-iot-quickstart&templateURL=https://cirrent-quickstarts.s3.uswest-2.amazonaws.com/infineon-iot-quickstart.yaml  <https://us-west-1.console.aws.amazon.com/cloudformation/home?region=us-west-1#/stacks/create/template?stackName=infineon-iot-quickstart&templateURL=https://cirrent-quickstarts.s3.uswest-2.amazonaws.com/infineon-iot-quickstart.yaml>`_
+    `https://us-west-1.console.aws.amazon.com/cloudformation/home?region=us-west-1#/stacks/create/template?stackName=infineon-iot-quickstart&templateURL=https://cirrent-quickstarts.s3.us-west-2.amazonaws.com/infineon-iot-quickstart.yaml  <https://us-west-1.console.aws.amazon.com/cloudformation/home?region=us-west-1#/stacks/create/template?stackName=infineon-iot-quickstart&templateURL=https://cirrent-quickstarts.s3.us-west-2.amazonaws.com/infineon-iot-quickstart.yaml>`_
  
     You can change the region in which you want to execute this template by changing the region=us-west-1 in this link to your required region. See `Choosing a Region <https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/select-region.html>`_ in the AWS documentation.
 
@@ -221,6 +221,59 @@ You may want to review the CloudFormation Best Practices and Security section in
         :alt: Dashboard 2
  
 
+Setting up the Azure Resource Group for Azure IoT Hub
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To set up an Azure Resource Group you need to complete the following steps.
+
+1. Log into Azure Portal using your Azure credentials. 
+
+2. Click on **Resource Groups**.
+
+.. image:: ../img/azr_img01.png
+        :align: center
+        :alt: Setting up Azure IoT Hub for CloudID
+
+3. Click **Create** to create a new Resource Group 
+
+.. image:: ../img/azr_img02.png
+        :align: center
+        :alt: Setting up Azure IoT Hub for CloudID
+
+4. Enter a name that that is less than 11 characters long. 
+
+.. note:: The 11 character limit is due to a limitation in Azure Resource Groups. Azure requires the name of the group to be between 7 and 24 characters. As part of the creation process, Azure appends a 13 character long string to the name you select. This means you need to keep the name of the group to less than 11 characters. 
+
+
+5. Select region **US East**, as shown below.
+
+.. image:: ../img/azr_img03.png
+        :align: center
+        :alt: Setting up Azure IoT Hub for CloudID
+
+
+**Prepare Azure Resource Group**
+
+You set up the Resource Group, using a script provided in the CIRRENT public Github repository. The script is a sample that can be used as-is, but you can also modify the script based on your needs. To use the script, ensure that you are logged into Azure in your browser. 
+
+1. In the same browser, click on this link: https://github.com/Cirrent/iot_azure_quickstart
+
+The link takes you to the CIRRENT Github repository. In the README file in the repository you will see a **Deploy to Azure** button that you can click to execute the sample template:
+
+.. image:: ../img/azr_img04.png
+        :align: center
+        :alt: Setting up Azure IoT Hub for CloudID
+
+2. Click on the **Deploy to Azure** button to continue. Assuming that you are logged in to Azure, the link will open a browser tab to an Azure URL where you can see the script execute and create the necessary resources in your account. The window will prompt you when provisioning is complete.
+
+.. image:: ../img/azr_img05.png
+        :align: center
+        :alt: Setting up Azure IoT Hub for CloudID
+
+
+
+
+
 
 Adding your Product Cloud API to CIRRENT™ Console
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -251,10 +304,48 @@ Next, configure the fields as follows:
 
 You have now added your AWS-based Product Cloud to CIRRENT™ Cloud ID and can now provision devices bound to your Cloud ID account directly into your Product Cloud.
 
+
+Configuring Azure IoT Hub
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Cloud ID has specific steps for Cloud ID users that rely on Azure for their Product Cloud. In order to set up the API connection in Cloud ID, you will need the **interop URL** and the **subscription ID** for the Azure resources. You can find these in the Azure console by doing the following:
+
+1. Click on the **Resource Group** you created using the Cloud ID template and select the **Deployments section**
+2. Click on the template name:
+
+.. image:: ../img/azr_img06.png
+        :align: center
+        :alt: Setting up Azure IoT Hub for CloudID
+
+3. Click on **Outputs** in the left menu:
+
+.. image:: ../img/azr_img07.png
+        :align: center
+        :alt: Setting up Azure IoT Hub for CloudID
+
+4. The interop URL (**interopURL**) and subscription ID (**subscriptionID**) will be displayed on the screen. Make a note of both as you'll need it to configure the Azure cloud API in CIRRENT Cloud ID. 
+
+5. Next, in the Product Cloud API section of Cloud ID, ensure that you select Azure as your Product Cloud:
+
+.. image:: ../img/azr_img08.png
+        :align: center
+        :alt: Setting up Azure IoT Hub for CloudID
+
+6. Continue to complete the following fields:
+
+* **Name** This is the name of your Azure cloud API.
+* **Interop URL.** Here, enter the information in the **interopURL** field in the Azure Console.
+* **Subscription ID.** Here, enter the information in the **subscriptionID** field in the Azure Console.
+
+7. Click **Create** to complete the configuration process.
+
+
+
 Configuring other cloud APIs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-First, select the Other option to start configuring your Cloud API, as below:
+First, select the **Other** option to start configuring your Cloud API, as below:
 
 .. image:: ../img/pca-8.png
         :align: center

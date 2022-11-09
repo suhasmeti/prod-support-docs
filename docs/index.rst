@@ -34,4 +34,4 @@ Today Infineon's cloud software services consist of the following offerings:
 
    /cirrent-mai
 
-   /cirrent-could-id
+   /cirrent-cloud-id
