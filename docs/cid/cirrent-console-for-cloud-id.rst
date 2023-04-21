@@ -8,9 +8,9 @@ User roles for Cloud ID
 
 There are two CIRRENT™ Console roles that pertain to Cloud ID users:
 
-**Cloud ID user**:  Users with this role can only bind devices to their corporate account.  This role is typically used for users in a manufacturing facility or warehouse, solely to bind devices for the Product Company that they represent.  
+**Cloud ID user**:  Users with this role can only bind devices to their OSTS account. This role is typically used for users in a manufacturing facility or warehouse, solely to bind devices for the Product Company that they represent.
 
-**Administrator**: An administrator can perform all the actions of a Cloud ID user. The administrator role is required to download Manifest Files, to configure APIs and to trigger device provisioning into the API if needed. This is a back-office task that involves advanced Cloud ID skills and access to cloud infrastructure.  
+**Administrator**: Users with this role can perform any actions in the UI across all OSTS applications and can manage access for other uses in the OSTS accounts that they administer. 
 
 
 Creating a user
